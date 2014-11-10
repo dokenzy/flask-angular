@@ -1,0 +1,31 @@
+<!doctype html>
+<html data-ng-app="app">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/bootstrap/dist/css/bootstrap.css') }}">
+    <script src="{{ url_for('static', filename='lib/angular/angular.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/angular-route/angular-route.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/angular-bootstrap/ui-bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/angular-bootstrap/ui-bootstrap-tpls.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/configs/routes.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/controllers/main-controller.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/controllers/hello-controller.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/controllers/goodbye-controller.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/services/api-service.js') }}"></script>
+    <base href="/" />
+  </head>
+  <body data-ng-controller="MainController as main">
+    <div class="container">
+      <h1><a href="/">Flask-AngularJS Boilerplate</a></h1>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/hello">hello</a>
+            <a class="navbar-brand" href="#/goodbye">goodbye</a>
+          </div>
+        </div>
+      </nav>
+      <div data-ng-view></div>
+    </div>
+  </body>
+</html>
